@@ -28,6 +28,10 @@ print(bookings)
 availability = matrix.get('availability', 'bc=1&f=2019-11-13T11:00&include=locations&include=bookingSettings&include=timeslots&l=718321&status=available')
 from pprint import pprint
 pprint(availability).json()
+
+# other actions can be worked out by trying it on the Matrix website and looking at the XHR request it creates e.g.
+all_bookings = matrix.get_with_full_url('https://app.matrixbooking.com/api/v1/user/current/bookings?include=locations&include=visit&include=facilities&include=extras&include=bookingSettings&include=layouts')
+pprint(all_bookings)
 ```
 
 ## Warning
