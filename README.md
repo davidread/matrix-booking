@@ -29,10 +29,22 @@ availability = matrix.get('availability', 'bc=1&f=2019-11-13T11:00&include=locat
 from pprint import pprint
 pprint(availability).json()
 
-# other actions can be worked out by trying it on the Matrix website and looking at the XHR request it creates e.g.
+# or you can use a full URL
 all_bookings = matrix.get_with_full_url('https://app.matrixbooking.com/api/v1/user/current/bookings?include=locations&include=visit&include=facilities&include=extras&include=bookingSettings&include=layouts')
 pprint(all_bookings)
 ```
+
+## API calls
+
+API documentation: https://developers.matrixbooking.com/#introduction
+
+Also you can work out syntax by trying an action manually on the Matrix website, and look at the XHR request it creates.
+
+## Auth
+
+This client uses username/password, as you would if logging into the website, which seems fine for low key personal use.
+
+Alternatively, with the blessing of the administrators, you could [get an API key](https://developers.matrixbooking.com/#authentication). Support for this could be added to this client with a line or two of code.
 
 ## Warning
 
@@ -50,4 +62,4 @@ Relevant rules:
 
 Remember you are using your own credentials, so your actions are logged against you.
 
-The Matrix Booking API is not officially documented, and whilst it's clear how to use it, and there are no technical barriers, if there is abuse then it would make sense for the barriers to API use the API to be chagnehave barriers put up. So don't.
+The Matrix Booking API is not officially documented, and whilst it's clear how to use it, and there are no technical barriers, if there is abuse then we can expect the company apply barriers to API use. So don't.
