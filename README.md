@@ -4,6 +4,8 @@ Python client for interacting with the Matric Booking API.
 
 Unofficial.
 
+TODO: compare this client with this other one, and bring in any advantages it has: https://github.com/moj-analytical-services/matrixbooking/blob/master/api_requests.py
+
 ## Getting started
 
 First create your config file with your Matrix Booking username and password
